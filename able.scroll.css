@@ -1,0 +1,65 @@
+
+.scrollable  {
+	position: relative;
+	padding: 0px !important;
+	overflow: hidden;
+}
+	.scrollable .scroll-bar  {
+		z-index: 2;
+		position: absolute;
+		right: 0px;
+		height: 100%;
+		width: 8px;
+		background:#f6f6f6 url(img/scrollBorder.gif) repeat-y left top;
+		opacity:0;
+		-webkit-transition: opacity .25s ease-in-out;
+		-moz-transition: opacity .25s ease-in-out;
+		transition: opacity .25s ease-in-out;
+	}
+	.scrollable .scroll-bar.show  {
+		opacity:1;
+	}
+		.scrollable .scroll-bar .thumb {
+			position: absolute;
+			width: 100%;
+			background-color: #dadada;
+			border-left: 1px solid #c5c5c5;
+			-webkit-transition: background .25s ease-in-out;
+			-moz-transition: background .25s ease-in-out;
+			transition: background .25s ease-in-out;
+		}
+		.scrollable .scroll-bar:hover .thumb {
+			background-color:#b4b4b4;
+			border-color:#9a9a9a;
+		}
+		.scrollable .scroll-bar .thumbDown  {
+			background-color:#868686 !important;
+			border-color:#4a4a4a !important;
+		}
+	.scrollable .viewport  {
+		position: relative;
+		margin: 0px !important;
+		padding: 0px !important;
+		overflow-x: hidden;
+		z-index: 1;
+	}
+		.scrollable .viewport .overview  {
+			position: relative;
+			margin: 0px !important;
+			padding: 0px !important;
+		}
+.not-selectable  {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.scrollCover  {
+	top:0px;
+	left:0px;
+	position:absolute;
+	z-index:1000000;
+	cursor:default !important;
+}
